@@ -15,7 +15,19 @@
         <label for="textboxpassword">Mật khẩu:</label>
         <input type="password" id="textboxpassword">
         <button id="btnlogin">Đăng Nhập</button>
-        
+        <script>
+            document.getElementById("btnlogin").addEventListener("click", function() {
+                let username = document.getElementById("txtUserName").value;
+                let password = document.getElementById("txtpassword").value;
+            
+                if (username === "admin" && password === "admin") {
+                    alert("Đăng nhập thành công!");
+                    window.location.href = "success.html";
+                } else {
+                    alert("Sai tên đăng nhập hoặc mật khẩu!");
+                }
+            });
+        </script>
        
     </div>
 </body>
